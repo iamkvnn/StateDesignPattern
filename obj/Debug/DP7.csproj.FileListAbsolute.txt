@@ -1,0 +1,13 @@
+C:\Users\khoa2\source\repos\DP7\bin\Debug\DP7.exe.config
+C:\Users\khoa2\source\repos\DP7\bin\Debug\DP7.exe
+C:\Users\khoa2\source\repos\DP7\bin\Debug\DP7.pdb
+C:\Users\khoa2\source\repos\DP7\obj\Debug\DP7.csproj.AssemblyReference.cache
+C:\Users\khoa2\source\repos\DP7\obj\Debug\DP7.Properties.Resources.resources
+C:\Users\khoa2\source\repos\DP7\obj\Debug\DP7.csproj.GenerateResource.cache
+C:\Users\khoa2\source\repos\DP7\obj\Debug\DP7.csproj.CoreCompileInputs.cache
+C:\Users\khoa2\source\repos\DP7\obj\Debug\DP7.exe
+C:\Users\khoa2\source\repos\DP7\obj\Debug\DP7.pdb
+C:\Users\khoa2\source\repos\DP7\bin\Debug\System.Drawing.Common.dll
+C:\Users\khoa2\source\repos\DP7\bin\Debug\System.Drawing.Common.pdb
+C:\Users\khoa2\source\repos\DP7\bin\Debug\System.Drawing.Common.xml
+C:\Users\khoa2\source\repos\DP7\obj\Debug\DP7.csproj.Up2Date
