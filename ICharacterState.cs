@@ -9,7 +9,7 @@ namespace DP7
     public interface ICharacterState
     {
         void Attack(Character character);
-        void PickItem();
+        void PickItem(Character character);
         void RecoverEnergy(Character character);
         void Move(Character character, int dx, int dy);
         string GetStateName();

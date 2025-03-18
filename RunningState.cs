@@ -11,7 +11,7 @@ namespace DP7
     {
         public void Attack(Character character)
         {
-            Console.WriteLine("Nhân vật tấn công!");
+            character.Message = "Nhân vật tấn công khi chạy, tiêu hao 5 năng lượng";
             character.Energy -= 5;
             if (character.Energy <= 0)
             {
@@ -19,18 +19,18 @@ namespace DP7
                 character.SetState(new DeadState());
             }
         }
-        public void PickItem() => MessageBox.Show("Nhân vật nhặt vật phẩm khi chạy!");
-        public void RecoverEnergy(Character character) => MessageBox.Show("Không thể hồi năng lượng khi chạy!");
+        public void PickItem(Character character) => character.Message = "Đã nhặt vật phẩm trong lúc chạy";
+        public void RecoverEnergy(Character character) => character.Message = "Không thể hồi năng lượng khi chạy";
         public void Move(Character character, int dx, int dy)
         {
-            if (character.isMoving)
+            if (!character.isMoving)
             {
-                character.SetState(new MovingState());
+                character.SetState(new IdleState());
                 character.Move(dx, dy);
             }
             else if (!character.isRunning)
             {
-                character.SetState(new IdleState());
+                character.SetState(new MovingState());
                 character.Move(dx, dy);
             }
             else

@@ -9,29 +9,28 @@ namespace DP7
 {
     public class IdleState : ICharacterState
     {
-        public void Attack(Character character)
-        {
-            Console.WriteLine("Nhân vật tấn công!");
-        }
-        public void PickItem() => MessageBox.Show("Nhân vật nhặt vật phẩm!");
+        public void Attack(Character character) => character.Message = "Nhân vật tấn công khi đứng yên";
+        public void PickItem(Character character) => character.Message = "Nhân vật nhặt vật phẩm";
         public void RecoverEnergy(Character character)
         {
-            if (character.Energy < 100)
+            if (character.Energy < 200)
+            {
+                character.Message = "Đang phục hồi năng lượng";
                 character.Energy += 1;
+            }
             else
-                MessageBox.Show("Năng lượng đã đầy!");
+                character.Message = "Năng lượng đã đầy!";
         }
         public void Move(Character character, int dx, int dy)
         {
-            if (character.isMoving )//&& !character.isRunning)
+            if (character.isRunning && character.isMoving)//&& !character.isRunning)
             {
-                character.SetState(new MovingState());
+                character.SetState(new RunningState());
                 character.Move(dx, dy);
             }
-            else if (character.isRunning)
+            else if (character.isMoving)
             {
-                character.isMoving = false;
-                character.SetState(new RunningState());
+                character.SetState(new MovingState());
                 character.Move(dx, dy);
             }
         }
